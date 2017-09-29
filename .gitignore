@@ -1,3 +1,4 @@
+*.jar
 *.rbc
 capybara-*.html
 .rspec
