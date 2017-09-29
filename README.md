@@ -11,10 +11,17 @@ $ java -jar ../diffkit-app.jar -planfiles test9.plan.xml
 ```
 
 * Gem
+    * Generate OUTPUT.html, and see this
 
 ```
 $ jruby -S bundle install --path vendor/bundle
-$ jruby -S bundle exec daff.rb
+$ jruby -S bundle exec daff.rb diff --output diff.csv test9.lhs.csv test9.rhs.csv
+$ jruby -S bundle exec daff.rb render --output OUTPUT.html diff.csv
+```
+
+* daff options
+
+```
 daff can produce and apply tabular diffs.
 Call as:
   daff [--color] [--no-color] [--output OUTPUT.csv] a.csv b.csv
